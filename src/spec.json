@@ -1,0 +1,349 @@
+{
+  "title": "Riconciliazione delle riscossioni",
+  "description": "Prototipo navigabile per confrontare movimenti del rendiconto del tesoriere con importi attesi, individuare anomalie e preparare un prospetto di riconciliazione. Tutti i dati sono inventati; gli importi sono di esempio. La pagina panoramica presenta l’andamento mensile e l’esito dei controlli. Le tabelle supportano ricerca e filtri e i moduli consentono di registrare o correggere i dati di confronto.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "panoramica",
+      "title": "Panoramica",
+      "description": "Riepilogo dell’ultima riconciliazione e andamento mensile delle riscossioni. Il grafico mensile è rappresentato dai valori nella tabella sottostante.",
+      "metrics": [
+        {
+          "label": "Movimenti acquisiti",
+          "value": "24"
+        },
+        {
+          "label": "Importi attesi",
+          "value": "€ 8.450,00"
+        },
+        {
+          "label": "Riscossioni abbinate",
+          "value": "18"
+        },
+        {
+          "label": "Differenze rilevate",
+          "value": "3"
+        },
+        {
+          "label": "Pagamenti mancanti",
+          "value": "2"
+        },
+        {
+          "label": "Doppi versamenti",
+          "value": "1"
+        }
+      ],
+      "columns": [
+        "Mese",
+        "Atteso",
+        "Incassato",
+        "Scostamento",
+        "Esito"
+      ],
+      "rows": [
+        [
+          "Gennaio",
+          "€ 1.200,00",
+          "€ 1.200,00",
+          "€ 0,00",
+          "Riconciliato"
+        ],
+        [
+          "Febbraio",
+          "€ 1.450,00",
+          "€ 1.300,00",
+          "-€ 150,00",
+          "Differenza"
+        ],
+        [
+          "Marzo",
+          "€ 1.600,00",
+          "€ 1.600,00",
+          "€ 0,00",
+          "Riconciliato"
+        ],
+        [
+          "Aprile",
+          "€ 1.350,00",
+          "€ 1.050,00",
+          "-€ 300,00",
+          "Pagamento mancante"
+        ],
+        [
+          "Maggio",
+          "€ 1.500,00",
+          "€ 1.650,00",
+          "+€ 150,00",
+          "Possibile doppio versamento"
+        ],
+        [
+          "Giugno",
+          "€ 1.350,00",
+          "€ 1.350,00",
+          "€ 0,00",
+          "Riconciliato"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "controlli",
+      "title": "Controlli effettuati",
+      "description": "Elenco filtrabile dei controlli eseguiti durante il confronto tra rendiconto e importi attesi, con esito e dettaglio operativo.",
+      "metrics": [
+        {
+          "label": "Controlli totali",
+          "value": "24"
+        },
+        {
+          "label": "Positivi",
+          "value": "18"
+        },
+        {
+          "label": "Da verificare",
+          "value": "6"
+        }
+      ],
+      "columns": [
+        "Codice controllo",
+        "Tipo",
+        "Riferimento",
+        "Importo atteso",
+        "Importo rilevato",
+        "Esito",
+        "Dettaglio"
+      ],
+      "rows": [
+        [
+          "CTR-001",
+          "Abbinamento",
+          "Lumo-001",
+          "€ 120,00",
+          "€ 120,00",
+          "Positivo",
+          "Importo e riferimento corrispondono"
+        ],
+        [
+          "CTR-002",
+          "Differenza",
+          "Vela-014",
+          "€ 250,00",
+          "€ 100,00",
+          "Da verificare",
+          "Scostamento di € 150,00"
+        ],
+        [
+          "CTR-003",
+          "Mancato pagamento",
+          "Nubi-022",
+          "€ 300,00",
+          "€ 0,00",
+          "Da verificare",
+          "Nessun movimento associato"
+        ],
+        [
+          "CTR-004",
+          "Doppio versamento",
+          "Lumo-031",
+          "€ 180,00",
+          "€ 360,00",
+          "Da verificare",
+          "Due movimenti associati allo stesso riferimento"
+        ],
+        [
+          "CTR-005",
+          "Abbinamento",
+          "Vela-008",
+          "€ 95,00",
+          "€ 95,00",
+          "Positivo",
+          "Importo e riferimento corrispondono"
+        ],
+        [
+          "CTR-006",
+          "Riferimento non trovato",
+          "Nubi-017",
+          "€ 0,00",
+          "€ 75,00",
+          "Da verificare",
+          "Movimento senza importo atteso associato"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "movimenti",
+      "title": "Movimenti acquisiti",
+      "description": "Movimenti di esempio estratti dal rendiconto e confrontati con gli importi attesi. La specifica non prevede caricamento di [link rimosso] i dati possono essere registrati o aggiornati tramite il modulo.",
+      "metrics": [
+        {
+          "label": "Movimenti registrati",
+          "value": "6"
+        },
+        {
+          "label": "Abbinati",
+          "value": "3"
+        },
+        {
+          "label": "Da verificare",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Riferimento",
+        "Data movimento",
+        "Contribuente fittizio",
+        "Importo",
+        "Mese",
+        "Esito"
+      ],
+      "rows": [
+        [
+          "Lumo-001",
+          "2025-01-12",
+          "Nubi-001",
+          "€ 120,00",
+          "Gennaio",
+          "Abbinato"
+        ],
+        [
+          "Vela-014",
+          "2025-02-08",
+          "Lumo-014",
+          "€ 100,00",
+          "Febbraio",
+          "Differenza"
+        ],
+        [
+          "Nubi-022",
+          "2025-03-18",
+          "Vela-022",
+          "€ 0,00",
+          "Marzo",
+          "Mancante"
+        ],
+        [
+          "Lumo-031",
+          "2025-05-09",
+          "Nubi-031",
+          "€ 180,00",
+          "Maggio",
+          "Possibile doppio"
+        ],
+        [
+          "Vela-008",
+          "2025-04-11",
+          "Lumo-008",
+          "€ 95,00",
+          "Aprile",
+          "Abbinato"
+        ],
+        [
+          "Nubi-017",
+          "2025-06-20",
+          "Vela-017",
+          "€ 75,00",
+          "Giugno",
+          "Riferimento non trovato"
+        ]
+      ],
+      "form": [
+        "Riferimento",
+        "Data movimento",
+        "Contribuente fittizio",
+        "Importo",
+        "Mese",
+        "Esito"
+      ]
+    },
+    {
+      "id": "importi-attesi",
+      "title": "Importi attesi",
+      "description": "Registro inventato degli importi da confrontare con i movimenti acquisiti. Consente di inserire o correggere una voce attesa; la ricerca e i filtri sono disponibili separatamente dalla registrazione.",
+      "metrics": [
+        {
+          "label": "Voci attese",
+          "value": "6"
+        },
+        {
+          "label": "Totale atteso",
+          "value": "€ 1.040,00"
+        },
+        {
+          "label": "Da riconciliare",
+          "value": "3"
+        }
+      ],
+      "columns": [
+        "Riferimento",
+        "Data prevista",
+        "Contribuente fittizio",
+        "Importo atteso",
+        "Mese",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "Lumo-001",
+          "2025-01-31",
+          "Nubi-001",
+          "€ 120,00",
+          "Gennaio",
+          "Riconciliato"
+        ],
+        [
+          "Vela-014",
+          "2025-02-28",
+          "Lumo-014",
+          "€ 250,00",
+          "Febbraio",
+          "Differenza"
+        ],
+        [
+          "Nubi-022",
+          "2025-03-31",
+          "Vela-022",
+          "€ 300,00",
+          "Marzo",
+          "Non pagato"
+        ],
+        [
+          "Lumo-031",
+          "2025-05-31",
+          "Nubi-031",
+          "€ 180,00",
+          "Maggio",
+          "Possibile doppio"
+        ],
+        [
+          "Vela-008",
+          "2025-04-30",
+          "Lumo-008",
+          "€ 95,00",
+          "Aprile",
+          "Riconciliato"
+        ],
+        [
+          "Nubi-017",
+          "2025-06-30",
+          "Vela-017",
+          "€ 95,00",
+          "Giugno",
+          "Non abbinato"
+        ]
+      ],
+      "form": [
+        "Riferimento",
+        "Data prevista",
+        "Contribuente fittizio",
+        "Importo atteso",
+        "Mese",
+        "Stato"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "ardesia",
+    "fonts": "istituzionale"
+  }
+}
